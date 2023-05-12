@@ -5,3 +5,31 @@ header {
     color: white;
     padding: 1rem;
   }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 12rem;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.menu__link {
+  background: white;
+  padding: 0.5rem;
+  color: black;
+  border: 4px solid black;
+}
+
+.active {
+  background: black;
+  color: white;
+  border: 4px solid white;
+}

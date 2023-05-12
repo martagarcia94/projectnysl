@@ -1,9 +1,11 @@
 import nysl_logo from "./../assets/images/nysl_logo.png";
 import "./home.css";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <>
+    <Header />
       <h2 className="home__title">Upcoming events</h2>
       <div className="home__content">
         <img
