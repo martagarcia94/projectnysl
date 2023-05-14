@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import "./header.css";
+import "../assets/css/header.css";
 
 const Header = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const Header = () => {
       link: "/rules-and-policies",
       isActive: false,
     },
-    { name: "Game Information", link: "/game-information", isActive: false },
+    { name: "Game Information", link: "/games", isActive: false },
     { name: "Registration Form", link: "/registration-form", isActive: false },
   ];
 

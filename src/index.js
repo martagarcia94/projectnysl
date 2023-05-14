@@ -1,13 +1,46 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./assets/css/index.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import reportWebVitals from "./reportWebVitals";
+import RulesAndPolicies from "./components/RulesAndPolicies";
+import GameInformation from "./components/GameInformation";
+import RegistrationForm from "./components/RegistrationForm";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "about",
+    element: <About />,
+  },
+  {
+    path: "contact",
+    element: <Contact />,
+  },
+  {
+    path: "rules-and-policies",
+    element: <RulesAndPolicies />,
+  },
+  {
+    path: "games",
+    element: <GameInformation />,
+  },
+  {
+    path: "registration-form",
+    element: <RegistrationForm />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

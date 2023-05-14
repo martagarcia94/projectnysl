@@ -1,0 +1,16 @@
+.logo {
+  width: 150px;
+  height: 150px;
+}
+
+.home__content {
+  text-align: center;
+}
+
+.event__date {
+  font-style: italic;
+}
+
+.event__name {
+  margin-left: 1.5rem;
+}
