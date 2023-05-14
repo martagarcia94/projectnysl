@@ -1,0 +1,15 @@
+.rules__main {
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .rules__item {
+    margin-top: 1rem;
+  }
+  
+  @media all and (max-width: 768px) {
+    .rules__container {
+      margin: 0 0.5rem;
+      padding: 0;
+    }
+  }

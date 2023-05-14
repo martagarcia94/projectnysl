@@ -1,13 +1,14 @@
-.about__description {
+.about__title {
+  margin-left: 1rem;
+}
+
+.about__list {
+  list-style: none;
+  padding: 0;
+}
+ 
+@media all and (min-width: 768px) {
+  .about__description {
     margin-left: 2rem;
   }
-  
-  .about__title {
-    margin-left: 1rem;
-  }
-  
-  .about__list {
-    list-style: none;
-    padding: 0;
-  }
-  
+}
