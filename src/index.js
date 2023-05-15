@@ -9,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 import RulesAndPolicies from "./components/RulesAndPolicies";
 import GameInformation from "./components/GameInformation";
 import GameDetail from "./components/GameDetail";
-import RegistrationForm from "./components/RegistrationForm";
+import Messages from "./components/Messages";
 
 const router = createBrowserRouter([
   {
@@ -37,8 +37,8 @@ const router = createBrowserRouter([
     element: <GameDetail />,
   },
   {
-    path: "registration-form",
-    element: <RegistrationForm />,
+    path: "messages",
+    element: <Messages />,
   },
 ]);
 
