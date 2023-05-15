@@ -1,0 +1,19 @@
+.messages__header {
+    margin: 0;
+    width: 765px;
+    text-align: center;
+  }
+  
+  .messages__container {
+    width: 765px;
+    text-align: right;
+  }
+  
+  .messages__button {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .messages__text {
+    width: 100%;
+  }
