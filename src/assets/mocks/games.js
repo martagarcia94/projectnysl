@@ -4,11 +4,13 @@ export const information = {
         "9/01": {
           games: [
             {
+              id: 1,
               team: "U1 and U4",
               location: "AJ Katzenmaier",
               time: "9:30 a.m.",
             },
             {
+              id: 2,
               team: "U3 and U2",
               location: "Greenbay",
               time: "1:00 p.m.",
@@ -18,11 +20,13 @@ export const information = {
         "9/08": {
           games: [
             {
+              id: 3,
               team: "U5 and U6",
               location: "Howard A Yeager",
               time: "9:30 a.m.",
             },
             {
+              id: 4,
               team: "U6 and U1",
               location: "Marjorie P Hart",
               time: "1.00 p.m.",
@@ -32,11 +36,13 @@ export const information = {
         "9/15": {
           games: [
             {
+              id: 5,
               team: "U2 and U4",
               location: "North",
               time: "9:30 a.m.",
             },
             {
+              id: 6,
               team: "U3 and U5",
               location: "AJ Katzenmaier",
               time: "1.00 p.m.",
@@ -46,11 +52,13 @@ export const information = {
         "9/22": {
           games: [
             {
+              id: 7,
               team: "U1 and U3",
               location: "South",
               time: "9:30 a.m.",
             },
             {
+              id: 8,
               team: "U2 and U6",
               location: " Howard A Yeager",
               time: "1.00 p.m.",
@@ -60,6 +68,7 @@ export const information = {
         "9/29": {
           games: [
             {
+              id: 9,
               team: "U4 and U5",
               location: "Greenbay",
               time: "9:30 a.m.",
@@ -71,11 +80,13 @@ export const information = {
         "10/06": {
           games: [
             {
+              id: 10,
               team: "U2 and U5",
               location: " Marjorie P Hart",
               time: "9:30 a.m.",
             },
             {
+              id: 11,
               team: "U1 and U6",
               location: "South",
               time: "1:00 p.m.",
@@ -85,11 +96,13 @@ export const information = {
         "10/13": {
           games: [
             {
+              id: 12,
               team: "U3 and U4",
               location: " Howard A Yeager",
               time: "9:30 a.m.",
             },
             {
+              id: 13,
               team: "U5 and U1",
               location: "Greenbay",
               time: "1:00 p.m.",
@@ -99,11 +112,13 @@ export const information = {
         "10/20": {
           games: [
             {
+              id: 14,
               team: "U6 and U3",
               location: "North",
               time: "9:30 a.m.",
             },
             {
+              id: 15,
               team: "U2 and U4",
               location: "Marjorie P Hart",
               time: "1:00 p.m.",
@@ -113,11 +128,13 @@ export const information = {
         "10/27": {
           games: [
             {
+              id: 16,
               team: "U3 and U1",
               location: "AJ Katzenmaier",
               time: "9:30 a.m.",
             },
             {
+              id: 17,
               team: "U5 and U6",
               location: "Howard A Yeager",
               time: "1:00 p.m.",

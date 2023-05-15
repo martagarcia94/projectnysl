@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import reportWebVitals from "./reportWebVitals";
 import RulesAndPolicies from "./components/RulesAndPolicies";
 import GameInformation from "./components/GameInformation";
+import GameDetail from "./components/GameDetail";
 import RegistrationForm from "./components/RegistrationForm";
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "games",
     element: <GameInformation />,
+  },
+  {
+    path: "games/:month/:id",
+    element: <GameDetail />,
   },
   {
     path: "registration-form",

@@ -1,0 +1,4 @@
+.game__detail {
+    display: flex;
+    justify-content: space-between;
+  }

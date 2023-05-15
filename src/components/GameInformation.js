@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Template from "./Template";
 import { information } from "./../assets/mocks/games.js";
 import "./../assets/css/gameInformation.css";
@@ -31,7 +32,11 @@ const GameInformation = () => {
                         <th>{index === 0 ? date : ""}</th>
                         <td>{gameDetail.team}</td>
                         <td>{gameDetail.location}</td>
-                        <td>{gameDetail.time}</td>
+                        <Link
+                          to={`/games/${month}/${gameDetail.id}`}
+                          className="game__link">
+                          <td>{gameDetail.team}</td>
+                        </Link>
                       </tr>
                     )
                   )}
