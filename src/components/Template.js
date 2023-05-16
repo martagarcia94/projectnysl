@@ -1,7 +1,7 @@
 import Header from "./Header";
 import nysl_logo from "./../assets/images/nysl_logo.png";
 import "./../assets/css/template.css";
-import { signInWithGoogle, signOut } from "./../service/firebase";
+import LoginButton from "./LoginButton";
 
 const Template = ({ title, children }) => {
   return (
@@ -16,8 +16,7 @@ const Template = ({ title, children }) => {
         />
         <div>{children}</div>
       </div>
-      <button onClick={signInWithGoogle}>Log in with Google</button>
-      <button onClick={signOut}>Sign out</button>
+      <LoginButton />
     </>
   );
 };
