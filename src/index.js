@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     element: <GameDetail />,
   },
   {
-    path: "messages",
+    path: "messages/:id",
     element: <Messages />,
   },
 ]);

@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
 import Template from "./Template";
 import { information } from "../assets/mocks/games.js";
 import "./../assets/css/gameDetail.css";
+import firebase from "firebase/compat/app";
 
 const GameDetail = () => {
-  const { month, id } = useParams();
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      setUser(user);
+    });
+  }, []);
 
+  const { month, id } = useParams();
   const [game, setGame] = useState({});
   const [location, setLocation] = useState({});
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     const currentGame = getCurrentGame();
@@ -41,6 +47,7 @@ const GameDetail = () => {
     <>
       <Template title="Game Detail">
         <h2>Fall Schedule</h2>
+        {user && <Link to={`/messages/${game.id}`}>Go to messages</Link>}
         <div className="game__detail">
           <p>{game.team}</p>
           <p>{game.location}</p>

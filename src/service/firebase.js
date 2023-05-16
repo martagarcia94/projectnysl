@@ -1,7 +1,7 @@
 import firebase from "firebase/compat/app";
+import { getDatabase } from "firebase/database";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
-
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,9 +12,8 @@ const firebaseConfig = {
   appId: "nysl-545dd",
 };
 
-// Initialize Firebase
-// const app = 
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
+export const db = getDatabase(app);
 
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: "select_account" });
