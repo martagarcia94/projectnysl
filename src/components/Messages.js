@@ -7,43 +7,43 @@ import { onValue, ref, remove, set } from "firebase/database";
 import firebase from "firebase/compat/app";
 
 const Messages = () => {
-    const currentUser = firebase.auth().currentUser;
-    const { id } = useParams();
-    const [messages, setMessages] = useState([]);
-    const [inputValue, setInputValue] = useState("");
+  const currentUser = firebase.auth().currentUser;
+  const { id } = useParams();
+  const [messages, setMessages] = useState([]);
+  const [inputValue, setInputValue] = useState("");
   
     useEffect(() => {
       readFromDatabase();
     }, []);
   
-      const readFromDatabase = () => {
-      const query = ref(db, "messages");
-      return onValue(query, (snapshot) => {
-        const data = snapshot.val();
-        const filteredMessages = filterMessages(data);
-        const formattedMessages = formatMessages(filteredMessages);
-        setMessages(formattedMessages);
-      });
-    };
+  const readFromDatabase = () => {
+  const query = ref(db, "messages");
+    return onValue(query, (snapshot) => {
+  const data = snapshot.val();
+  const filteredMessages = filterMessages(data);
+  const formattedMessages = formatMessages(filteredMessages);
+    setMessages(formattedMessages);
+    });
+  };
 
-    const deleteFromDatabase = (messageId) => {
-      const dbRef = ref(db, `/messages/game-${id}/message-${messageId}`);
+  const deleteFromDatabase = (messageId) => {
+    const dbRef = ref(db, `/messages/game-${id}/message-${messageId}`);
       remove(dbRef).then(() => console.log("Deleted"));
-    };
+  };
   
-    const addNewMessageToDatabase = (message) => {
-      set(
-        ref(db, `/messages/game-${id}/message-${Math.floor(Math.random() * 10)}`),
+  const addNewMessageToDatabase = (message) => {
+    set(
+      ref(db, `/messages/game-${id}/message-${Math.floor(Math.random() * 10)}`),
         message
-      );
-    };
+    );
+  };
   
-    const handleMessageSubmit = () => {
-      const message = {
-        author: currentUser.multiFactor.user.email,
-        text: inputValue,
-        timestamp: Date.now(),
-      };
+  const handleMessageSubmit = () => {
+    const message = {
+      author: currentUser.multiFactor.user.email,
+      text: inputValue,
+      timestamp: Date.now(),
+    };
 
     addNewMessageToDatabase(message);
     setInputValue("");

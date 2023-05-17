@@ -29,13 +29,13 @@ const GameInformation = () => {
                   {gamesInfo.games[month][date].games.map(
                     (gameDetail, index) => (
                       <tr key={date + index}>
-                        <th>{index === 0 ? date : ""}</th>
+                        <td><strong>{index === 0 ? date : ""}</strong></td>
                         <td>{gameDetail.team}</td>
                         <td>{gameDetail.location}</td>
                         <Link
                           to={`/games/${month}/${gameDetail.id}`}
                           className="game__link">
-                          <td>{gameDetail.team}</td>
+                          <td>{gameDetail.time}</td>
                         </Link>
                       </tr>
                     )

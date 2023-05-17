@@ -10,6 +10,7 @@ import RulesAndPolicies from "./components/RulesAndPolicies";
 import GameInformation from "./components/GameInformation";
 import GameDetail from "./components/GameDetail";
 import Messages from "./components/Messages";
+import GamePictures from "./components/GamePictures";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "messages/:id",
     element: <Messages />,
+  },
+  {
+    path: "photos/:id",
+    element: <GamePictures />,
   },
 ]);
 
