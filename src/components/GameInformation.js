@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Template from "./Template";
 import { information } from "./../assets/mocks/games.js";
-import "./../assets/css/gameInformation.css";
+import "./../assets/css/gameInformation.css"; 
 
 const GameInformation = () => {
   const gamesInfo = information;
@@ -30,13 +30,14 @@ const GameInformation = () => {
                     (gameDetail, index) => (
                       <tr key={date + index}>
                         <td><strong>{index === 0 ? date : ""}</strong></td>
-                        <td>{gameDetail.team}</td>
-                        <td>{gameDetail.location}</td>
                         <Link
                           to={`/games/${month}/${gameDetail.id}`}
-                          className="game__link">
-                          <td>{gameDetail.time}</td>
+                          className="game__link"
+                        >
+                          <td>{gameDetail.team}</td>
                         </Link>
+                        <td>{gameDetail.location}</td>
+                          <td>{gameDetail.time}</td>
                       </tr>
                     )
                   )}

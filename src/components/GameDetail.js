@@ -41,9 +41,11 @@ const GameDetail = () => {
     const gamesByMonth = getGamesByMonth();
     return gamesByMonth.find((game) => game.id === Number(id));
   };
+  getGamesByMonth();
+  return (
     <>
-
-      <Template title="Game Detail">
+    
+<Template title="Game Detail">
         <h2>Fall Schedule</h2>
         {user && (
           <>
@@ -60,7 +62,6 @@ const GameDetail = () => {
         <iframe className="game__map" src={location.mapUrl} />
       </Template>
     </>
-  
+  );
 };
-
 export default GameDetail;

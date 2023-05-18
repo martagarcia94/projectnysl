@@ -1,43 +1,43 @@
 .game__table {
-    font-size: 10px;
+  font-size: 10px;
+}
+
+.game__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game__link {
+  display: block;
+  text-decoration: none;
+}
+
+.title {
+  margin-top: 1.5rem;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (min-width: 768px) {
+  .general-info {
+    max-width: 45vw;
   }
-  
-  .game__details {
+
+  .game__map {
+    width: 45vw;
+    height: 400px;
+  }
+
+  .game__table {
+    font-size: 1rem;
+    margin: 2rem 0;
+  }
+
+  .contact-info {
     display: flex;
     justify-content: space-between;
   }
-  
-  .game__link {
-    display: block;
-    text-decoration: none;
-  }
-  
-  .title {
-    margin-top: 1.5rem;
-  }
-  
-  .game-info {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  @media all and (min-width: 768px) {
-    .general-info {
-      max-width: 45vw;
-    }
-  
-    .game__map {
-      width: 45vw;
-      height: 400px;
-    }
-  
-    .game__table {
-      font-size: 1rem;
-      margin: 2rem 0;
-    }
-  
-    .contact-info {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
+}
