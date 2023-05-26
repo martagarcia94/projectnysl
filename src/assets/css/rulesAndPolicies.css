@@ -1,15 +1,30 @@
 .rules__main {
-    list-style: none;
-    margin-bottom: 0.5rem;
+  list-style: none;
+  margin-bottom: 5%;
+}
+
+.rules__item {
+  margin-top: 1%;
+  text-align: left;
+}
+
+@media all and (max-width: 768px) {
+  .rules__container {
+    text-align: center;
   }
   
-  .rules__item {
-    margin-top: 1rem;
+  .rules__container:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
   }
   
-  @media all and (max-width: 768px) {
-    .rules__container {
-      margin: 0 0.5rem;
-      padding: 0;
-    }
+  .rules__container .rules__main {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 10%;
   }
+}

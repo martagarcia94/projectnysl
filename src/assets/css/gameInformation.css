@@ -1,5 +1,11 @@
+.link {
+  text-align: center;
+}
+
 .game__table {
-  font-size: 10px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2rem 0;
 }
 
 .game__details {
@@ -8,8 +14,9 @@
 }
 
 .game__link {
-  display: block;
-  text-decoration: none;
+  display: relative;
+  justify-content: space-between;
+  color: green;
 }
 
 .title {
@@ -31,13 +38,29 @@
     height: 400px;
   }
 
-  .game__table {
-    font-size: 1rem;
-    margin: 2rem 0;
-  }
-
   .contact-info {
     display: flex;
     justify-content: space-between;
+    text-align: center;
   }
+
+  .final-info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mail {
+    color: green;
+  }
+  
+}
+
+  .general-info {
+    display: relative;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+.mail {
+  color: green;
 }

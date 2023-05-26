@@ -1,0 +1,17 @@
+[debug] [2023-05-19T13:24:43.466Z] ----------------------------------------------------------------------
+[debug] [2023-05-19T13:24:43.468Z] Command:       /usr/local/bin/firebase /Users/m./.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-05-19T13:24:43.469Z] CLI Version:   11.26.0
+[debug] [2023-05-19T13:24:43.469Z] Platform:      darwin
+[debug] [2023-05-19T13:24:43.469Z] Node Version:  v16.16.0
+[debug] [2023-05-19T13:24:43.475Z] Time:          Fri May 19 2023 15:24:43 GMT+0200 (Central European Summer Time)
+[debug] [2023-05-19T13:24:43.475Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-19T13:24:43.485Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-19T13:24:43.635Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-19T13:24:43.637Z] > authorizing via signed-in user (martagj94@gmail.com)
+[debug] [2023-05-19T13:24:43.638Z] [iam] checking project nysl-545dd for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-05-19T13:24:43.640Z] > refreshing access token with scopes: []
+[debug] [2023-05-19T13:24:43.641Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-19T13:24:43.642Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[warn] ⚠  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-05-19T13:25:14.750Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json

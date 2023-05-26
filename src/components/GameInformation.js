@@ -8,7 +8,8 @@ const GameInformation = () => {
   const gamesInfo = information;
   const months = Object.keys(gamesInfo.games);
   const locations = Object.keys(gamesInfo.locations);
-  return (
+
+return (
     <>
       <Template title="NYSL Game Information">
         <h2>Fall Schedule</h2>
@@ -24,32 +25,33 @@ const GameInformation = () => {
               </tr>
             </thead>
             <tbody>
-              {Object.keys(gamesInfo.games[month]).map((date, index) => (
-                <React.Fragment key={index}>
-                  {gamesInfo.games[month][date].games.map(
-                    (gameDetail, index) => (
-                      <tr key={date + index}>
-                        <td><strong>{index === 0 ? date : ""}</strong></td>
-                        <Link
-                          to={`/games/${month}/${gameDetail.id}`}
-                          className="game__link"
-                        >
-                          <td>{gameDetail.team}</td>
-                        </Link>
-                        <td>{gameDetail.location}</td>
-                          <td>{gameDetail.time}</td>
-                      </tr>
-                    )
-                  )}
-                </React.Fragment>
-              ))}
-            </tbody>
+            {months.map((month) =>
+              Object.keys(gamesInfo.games[month]).map((date) =>
+                gamesInfo.games[month][date].games.map((gameDetail, index) => (
+                  <tr key={`${month}-${date}-${index}`}>
+                    <td>{date}</td>
+                    <td className="link"> 
+                      <Link
+                        to={`/games/${month}/${gameDetail.id}`}
+                        className="game__link"
+                      >
+                        {gameDetail.team}
+                      </Link>
+                    </td>
+                    <td>{gameDetail.location}</td>
+                    <td>{gameDetail.time}</td>
+                  </tr>
+                ))
+              )
+            )}
+          </tbody>
           </table>
         ))}
+        <br></br>
         <p>
-          <strong>Game locations:</strong>
+          <strong>GAME LOCATIONS:</strong>
           {locations.map((location, index) => (
-            <div key={index}>
+            <div key={index}><br></br>
               <div className="game__details">
                 <p>
                   <strong>{gamesInfo.locations[location].fullName}</strong>
@@ -63,31 +65,37 @@ const GameInformation = () => {
             </div>
           ))}
         </p>
+        <div className="final-info">
         <div className="general-info">
           <p>
             <strong>Facility Type: </strong>Outdoor
           </p>
+          <br></br>
           <p>
             <strong>Additional Information: </strong>If deemed necessary by
             NYSL, games may be shortened or cancelled due to extreme weather
             conditions. Phone: (630) 690-8132 Email:
             michael.randall@chisoccer.org
           </p>
+          <br></br>
           <p>
             <strong>Please direct all questions to: </strong>Michael Randall,
             League Coordinator
           </p>
+          <br></br>
           <div className="contact-info">
             <p>
-              <strong>Phone: </strong>(630) 690-8132
+              <strong>Phone: <br></br></strong>(630) 690-8132
             </p>
+            <br></br>
             <p>
-              <strong>Email: </strong>{" "}
-              <a href="mailto:michael.randall@chisoccer.org">
+              <strong>Email: <br></br></strong>{" "}
+              <a className="mail" href="mailto:michael.randall@chisoccer.org">
                 michael.randall@chisoccer.org
               </a>
             </p>
           </div>
+        </div>
         </div>
       </Template>
     </>

@@ -1,5 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import "../assets/css/header.css";
+import { Button } from '@mui/material';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import AboutRoundedIcon from '@mui/icons-material/InfoRounded';
+import ContactRoundedIcon from '@mui/icons-material/ContactMailRounded';
+import PolicyRoundedIcon from '@mui/icons-material/PolicyRounded';
+import GamesRoundedIcon from '@mui/icons-material/SportsEsportsRounded';
 
 const Header = () => {
   const location = useLocation();
@@ -27,20 +33,36 @@ const Header = () => {
   
   return (
     <header>
-      <h1>Northside Youth Soccer League</h1>
+      <h1>NORTHSIDE YOUTH LEAGUE</h1>
       <nav>
-        <ul className="list">
-          {menu.map((menuItem, index) => (
-            <Link
-              key={index}
-              className={`menu__link ${menuItem.isActive ? "active" : ""}`}
-              to={menuItem.link}
-            >
-              <li>{menuItem.name}</li>
-            </Link>
-          ))}
-        </ul>
-      </nav>
+      <ul className="list">
+        <Link to="/">
+          <Button variant="contained" color="success" startIcon={<HomeRoundedIcon />}>
+            Home
+          </Button>
+        </Link>
+        <Link to="/about">
+          <Button variant="contained" color="success" startIcon={<AboutRoundedIcon />}>
+            About
+          </Button>
+        </Link>
+        <Link to="/contact">
+          <Button variant="contained" color="success" startIcon={<ContactRoundedIcon />}>
+            Contact
+          </Button>
+        </Link>
+        <Link to="/rules-and-policies">
+          <Button variant="contained" color="success" startIcon={<PolicyRoundedIcon />}>
+            Rules and Policies
+          </Button>
+        </Link>
+        <Link to="/games">
+          <Button variant="contained" color="success" startIcon={<GamesRoundedIcon />}>
+            Game information
+          </Button>
+        </Link>
+      </ul>
+    </nav>
     </header>
   );
 };

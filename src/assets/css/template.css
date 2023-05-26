@@ -1,29 +1,36 @@
-.logo {
-    width: 150px;
-    height: 150px;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
   .content {
     text-align: center;
-    margin: 0 1rem;
+    font-size: medium;
+    font-family: 'Montserrat';
   }
-  
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    position:relative;
+  }
+    
   .title {
     border-bottom: 5px solid black;
     padding-bottom: 1rem;
+    margin: 0 auto;
+    width: 80%;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: xx-large;
+    font-family: 'Montserrat';
   }
   
-  @media all and (min-width: 768px) {
+  @media all and (max-width: 100%) {
     .content {
-      text-align: left;
-      display: flex;
+      position: flex;
+      text-align: center;
+      display:flex;
       gap: 1rem;
-    }
-  
-    .title {
-      margin-left: 10rem;
-      width: 60%;
+      align-items:flex-start; 
     }
   }
+
+ 

@@ -1,7 +1,8 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, provider } from "./../service/firebase";
+import "./../assets/css/loginButton.css";
 
-const LoginButton = () => {
+const LoginButton = ({ className }) => {
   const [user] = useAuthState(auth);
 
   const handleLoginClick = () => {
@@ -13,7 +14,7 @@ const LoginButton = () => {
   };
 
   return (
-    <button onClick={handleLoginClick}>
+    <button className="login-button" onClick={handleLoginClick}>
       {user ? "Sign out" : "Log in with Google"}
     </button>
   );

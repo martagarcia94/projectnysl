@@ -62,8 +62,8 @@ const RulesAndPolicies = () => {
               </li>
             </ol>
           </li>
-          <li>
-            <strong>TEAM BENCH AREAS</strong>
+          <li className="rules__item">
+            <strong>TEAM BENCH AREAS.</strong>
             <ol type="a">
               <li className="rules__item">
                 Recreation & District Programs
